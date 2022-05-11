@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package advcalc;
+
+service AdvancedCalc {
+  rpc Power (PowerRequest) returns (PowerResponse) {}
+}
+
+message PowerRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message PowerResponse {
+  double pow = 1;
+}
